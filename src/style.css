@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Rubik";
+    src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@theme {
+    --color-background: #313e51;
+    --color-toggle: #a729f5;
+    --color-logo-fill: #f6e7ff;
+    --font-default: "Rubik", sans-serif;
+}

@@ -6,7 +6,46 @@
         <link rel="stylesheet" href="/src/style.css" />
         <title>Quiz App</title>
     </head>
-    <body>
-        <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <body class="bg-background font-default text-white">
+        <main>
+            <div class="px-5 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="bg-logo-fill rounded-sm h-[2.5em] w-[2.5em]"
+                        >
+                            <img
+                                src="/src/assets/img/icon-accessibility.svg"
+                                alt="Icon of accessibility"
+                                class="p-1"
+                            />
+                        </div>
+                        <p class="font-bold text-[1.125em]">Accessibility</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <img
+                            src="/src/assets/img/icon-sun-light.svg"
+                            alt="an icon of light theme"
+                            class="h-4 w-4"
+                        />
+                        <input
+                            type="checkbox"
+                            class="relative cursor-pointer bg-toggle w-8 h-5 appearance-none rounded-full before:w-3 before:h-3 before:bg-white before:rounded-full before:absolute before:top-1/2 before:left-1 before:-translate-y-1/2 before:transition transform checked:before:translate-x-3"
+                        />
+
+                        <img
+                            src="/src/assets/img/icon-moon-light.svg"
+                            alt="an icon of moon dark theme "
+                            class="h-4 w-4"
+                        />
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
+
+<!--<input
+    type="checkbox"
+    class="appearance-none relative w-12 h-[26px] bg-toggle rounded-full cursor-pointer before:content-[''] before:absolute before:w-[18px] before:h-[18px] before:bg-white before:rounded-full before:top-1 before:left-1 before:transition-transform checked:before:translate-x-[22px]"
+/>-->
