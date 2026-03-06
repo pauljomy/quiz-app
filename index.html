@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="/src/style.css" />
     <title>Quiz App</title>
   </head>
-  <body
-    class="min-h-dvh bg-background font-default text-white bg-[url('/src/assets/img/pattern-background-mobile-dark.svg')] bg-no-repeat bg-cover"
-  >
+  <body class="min-h-dvh bg-background font-default text-text-default">
     <main>
       <div>
         <div class="flex items-center justify-between px-6 py-6">
           <div class="flex items-center gap-2 w-full justify-end">
             <img
-              src="/src/assets/img/icon-sun-light.svg"
+              src="/src/assets/img/icon-sun-dark.svg"
               alt="an icon of light theme"
-              class="h-4 w-4"
+              class="h-4 w-4 dark:hidden"
+            />
+            <img
+              src="/src/assets/img/icon-sun-light.svg"
+              alt="an icon of dark theme"
+              class="h-4 w-4 hidden dark:block"
             />
             <input
               type="checkbox"
@@ -24,9 +27,14 @@
             />
 
             <img
-              src="/src/assets/img/icon-moon-light.svg"
+              src="/src/assets/img/icon-moon-dark.svg"
               alt="an icon of moon dark theme "
-              class="h-4 w-4"
+              class="h-4 w-4 dark:hidden"
+            />
+            <img
+              src="/src/assets/img/icon-moon-light.svg"
+              alt="an icon of moon dark theme"
+              class="h-4 w-4 hidden dark:block"
             />
           </div>
         </div>
@@ -55,7 +63,7 @@
               <img
                 src="/src/assets/img/icon-css.svg"
                 alt="An icon of HTML"
-                class="bg-html-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                class="bg-css-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
               />
               <p class="font-medium">CSS</p>
             </div>
@@ -65,7 +73,7 @@
               <img
                 src="/src/assets/img/icon-js.svg"
                 alt="An icon of HTML"
-                class="bg-html-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                class="bg-js-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
               />
               <p class="font-medium">JAVASCRIPT</p>
             </div>
@@ -75,7 +83,7 @@
               <img
                 src="/src/assets/img/icon-accessibility.svg"
                 alt="An icon of HTML"
-                class="bg-html-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                class="bg-accessibility-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
               />
               <p class="font-medium uppercase">Accessibility</p>
             </div>

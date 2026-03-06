@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @font-face {
   font-family: "Rubik";
   src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
@@ -15,11 +17,60 @@
 }
 
 @theme {
-  --color-background: #313e51;
+  /*fonts*/
+  --font-default: "Rubik", sans-serif;
+
+  /*light and default theme*/
   --color-toggle: #a729f5;
-  --color-logo-fill: #f6e7ff;
   --color-html-fill: #fff5ed;
+  --color-css-fill: #e0fdef;
+  --color-js-fill: #ebf0ff;
+  --color-accessibility-fill: #f6e7ff;
+
+  /*colors which will switch to dark*/
+  --color-background: #f4f6fa;
+  --color-div-fill: #fff;
+  --color-tag-line: #626c7f;
+  --color-text-default: #313e51;
+}
+
+html.dark {
+  --color-background: #313e51;
   --color-div-fill: #3b4d66;
   --color-tag-line: #abc1e1;
-  --font-default: "Rubik", sans-serif;
+  --color-text-default: #fff;
+}
+
+body {
+  background-image: url("/src/assets/img/pattern-background-mobile-light.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html.dark {
+  background-image: url("/src/assets/img/pattern-background-mobile-dark.svg");
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("/src/assets/img/pattern-background-tablet-light.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  html.dark {
+    background-image: url("/src/assets/img/pattern-background-tablet-dark.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url("/src/assets/img/pattern-background-desktop-light.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  html.dark {
+    background-image: url("/src/assets/img/pattern-background-desktop-dark.svg");
+  }
 }
