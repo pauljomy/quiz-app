@@ -47,8 +47,10 @@ body {
   background-size: cover;
 }
 
-html.dark {
+html.dark body {
   background-image: url("/src/assets/img/pattern-background-mobile-dark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -58,7 +60,7 @@ html.dark {
     background-size: cover;
   }
 
-  html.dark {
+  html.dark body {
     background-image: url("/src/assets/img/pattern-background-tablet-dark.svg");
   }
 }
@@ -70,7 +72,7 @@ html.dark {
     background-size: cover;
   }
 
-  html.dark {
+  html.dark body {
     background-image: url("/src/assets/img/pattern-background-desktop-dark.svg");
   }
 }
