@@ -7,9 +7,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Rubik";
+    src: url("./assets/fonts/Rubik-Italic-VariableFont_wght.ttf");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 @theme {
-    --color-background: #313e51;
+    --color-background: #2d3949;
     --color-toggle: #a729f5;
     --color-logo-fill: #f6e7ff;
+    --color-html-fill: #fff5ed;
+    --color-div-fill: #3b4d66;
+    --color-tag-line: #abc1e1;
     --font-default: "Rubik", sans-serif;
 }
