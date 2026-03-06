@@ -1,13 +1,13 @@
-const toggle = document.querySelector("input[type='checkbox']");
-
-toggle?.addEventListener("change", () => {
-  document.documentElement.classList.toggle("dark");
-});
+const toggle = document.querySelector(
+  "input[type='checkbox']",
+) as HTMLInputElement;
 
 if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark");
 }
 
-localStorage.theme = document.documentElement.classList.contains("dark")
-  ? "dark"
-  : "light";
+toggle?.addEventListener("change", () => {
+  const isDark = document.documentElement.classList.toggle("dark");
+
+  localStorage.theme = isDark ? "dark" : "light";
+});
