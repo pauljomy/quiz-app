@@ -4,6 +4,7 @@ const toggle = document.querySelector(
 
 if (localStorage.theme === "dark") {
   document.documentElement.classList.add("dark");
+  toggle.checked = true;
 }
 
 toggle?.addEventListener("change", () => {
