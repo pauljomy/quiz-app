@@ -1,98 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/style.css" />
-    <title>Quiz App</title>
-  </head>
-  <body class="min-h-dvh bg-background font-default text-text-default">
-    <main>
-      <div>
-        <div class="flex items-center justify-between px-6 py-6">
-          <div class="flex items-center gap-2 w-full justify-end">
-            <img
-              src="/src/assets/img/icon-sun-dark.svg"
-              alt="an icon of light theme"
-              class="h-4 w-4 dark:hidden"
-            />
-            <img
-              src="/src/assets/img/icon-sun-light.svg"
-              alt="an icon of dark theme"
-              class="h-4 w-4 hidden dark:block"
-            />
-            <input
-              type="checkbox"
-              class="relative cursor-pointer bg-toggle w-8 h-5 appearance-none rounded-full before:w-3 before:h-3 before:bg-white before:rounded-full before:absolute before:top-1/2 before:left-1 before:-translate-y-1/2 before:transition transform checked:before:translate-x-3"
-            />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/style.css" />
+        <title>Quiz App</title>
+    </head>
+    <body class="min-h-dvh bg-background font-default text-text-default">
+        <main class="md:max-w-[40em] mx-auto xl:max-w-[72em]">
+            <div>
+                <div
+                    class="flex items-center justify-between px-6 py-6 xl:py-16"
+                >
+                    <div id="logo" class="hidden">Logo</div>
+                    <div class="flex items-center gap-2 w-full justify-end">
+                        <img
+                            src="/src/assets/img/icon-sun-dark.svg"
+                            alt="an icon of light theme"
+                            class="h-4 w-4 dark:hidden"
+                        />
+                        <img
+                            src="/src/assets/img/icon-sun-light.svg"
+                            alt="an icon of dark theme"
+                            class="h-4 w-4 hidden dark:block"
+                        />
+                        <input
+                            type="checkbox"
+                            class="relative cursor-pointer bg-toggle w-8 h-5 appearance-none rounded-full before:w-3 before:h-3 before:bg-white before:rounded-full before:absolute before:top-1/2 before:left-1 before:-translate-y-1/2 before:transition transform checked:before:translate-x-3"
+                        />
 
-            <img
-              src="/src/assets/img/icon-moon-dark.svg"
-              alt="an icon of moon dark theme "
-              class="h-4 w-4 dark:hidden"
-            />
-            <img
-              src="/src/assets/img/icon-moon-light.svg"
-              alt="an icon of moon dark theme"
-              class="h-4 w-4 hidden dark:block"
-            />
-          </div>
-        </div>
-        <div class="px-6 pt-8">
-          <h1 class="mb-4 leading-10">
-            <span class="text-[2.5em] font-light">Welcome to the </span>
-            <span class="text-[2.5em] font-semibold">Frontend Quiz!</span>
-          </h1>
-          <p class="mb-10 text-tag-line italic">
-            Pick a subject to get started.
-          </p>
-          <div>
-            <div
-              class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4"
-            >
-              <img
-                src="/src/assets/img/icon-html.svg"
-                alt="An icon of HTML"
-                class="bg-html-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
-              />
-              <p class="font-medium">HTML</p>
+                        <img
+                            src="/src/assets/img/icon-moon-dark.svg"
+                            alt="an icon of moon dark theme "
+                            class="h-4 w-4 dark:hidden"
+                        />
+                        <img
+                            src="/src/assets/img/icon-moon-light.svg"
+                            alt="an icon of moon dark theme"
+                            class="h-4 w-4 hidden dark:block"
+                        />
+                    </div>
+                </div>
+                <div class="px-6 pt-8 xl:flex">
+                    <div class="flex-1">
+                        <h1
+                            class="text-[2.5em] mb-4 leading-10 md:text-[4em] md:leading-18"
+                            id="heading"
+                        >
+                            <span class="font-light">Welcome to the </span>
+                            <span class="font-semibold md:block"
+                                >Frontend Quiz!</span
+                            >
+                        </h1>
+                        <p class="mb-10 text-tag-line italic">
+                            Pick a subject to get started.
+                        </p>
+                        <div class="" id="questions"></div>
+                    </div>
+                    <div class="flex-1">
+                        <button
+                            id="btn-html"
+                            data-subject="html"
+                            class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4 w-full"
+                        >
+                            <img
+                                src="/src/assets/img/icon-html.svg"
+                                alt="An icon of HTML"
+                                class="bg-html-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                            />
+                            <p class="font-medium">HTML</p>
+                        </button>
+                        <button
+                            class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4 w-full"
+                            id="btn-css"
+                            data-subject="css"
+                        >
+                            <img
+                                src="/src/assets/img/icon-css.svg"
+                                alt="An icon of CSS"
+                                class="bg-css-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                            />
+                            <p class="font-medium">CSS</p>
+                        </button>
+                        <button
+                            class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4 w-full"
+                            id="btn-js"
+                            data-subject="js"
+                        >
+                            <img
+                                src="/src/assets/img/icon-js.svg"
+                                alt="An icon of Javascript"
+                                class="bg-js-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                            />
+                            <p class="font-medium">JAVASCRIPT</p>
+                        </button>
+                        <button
+                            class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4 w-full"
+                            id="btn-accesibility"
+                            data-subject="accessibility"
+                        >
+                            <img
+                                src="/src/assets/img/icon-accessibility.svg"
+                                alt="An icon of HTML"
+                                class="bg-accessibility-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
+                            />
+                            <p class="font-medium uppercase">Accessibility</p>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div
-              class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4"
-            >
-              <img
-                src="/src/assets/img/icon-css.svg"
-                alt="An icon of HTML"
-                class="bg-css-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
-              />
-              <p class="font-medium">CSS</p>
-            </div>
-            <div
-              class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4"
-            >
-              <img
-                src="/src/assets/img/icon-js.svg"
-                alt="An icon of HTML"
-                class="bg-js-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
-              />
-              <p class="font-medium">JAVASCRIPT</p>
-            </div>
-            <div
-              class="rounded-xl flex items-center gap-4 bg-div-fill p-4 mb-4"
-            >
-              <img
-                src="/src/assets/img/icon-accessibility.svg"
-                alt="An icon of HTML"
-                class="bg-accessibility-fill w-[2.5em] h-[2.5em] rounded-sm p-1"
-              />
-              <p class="font-medium uppercase">Accessibility</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="/src/main.js" type="module"></script>
-  </body>
+        </main>
+        <script src="/src/main.js" type="module"></script>
+    </body>
 </html>
 
 <!--<input
